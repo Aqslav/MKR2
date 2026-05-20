@@ -27,7 +27,7 @@ jobs:
 
       - name: Run tests
         run: |
-          pytest -v --html=pytest-report.html --self-contained-html
+          python manage.py test
           
       - name: Lint (PEP8 via flake8)
         run: |
