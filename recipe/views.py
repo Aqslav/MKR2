@@ -11,6 +11,6 @@ from django.db.models import Count
 from .models import Category
 
 def category_list_view(request):
-    categories_with_count = Category.objects.annotate(recipes_count=Count('recipe'))
+    categories_with_count = Category.objects.annotate(recipes_count=Count('categories'))
     context = {'categories': categories_with_count}
     return render(request, 'category_list.html', context)
